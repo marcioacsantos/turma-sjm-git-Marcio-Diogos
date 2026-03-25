@@ -1,49 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini App Escolar</title>
-    
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso TETPSI</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-<header>
-  <h1>Lista de Tarefas</h1>
-</header>
 
-<div class="container">
-  <h2>Adicionar tarefa</h2>
-  <input type="text" id="taskInput" placeholder="Escreve uma tarefa...">
-  <button onclick="addTask()">Adicionar</button>
-
-  <h2>Tarefas</h2>
-  <ul id="taskList"></ul>
-</div>
-
-<script>
-  function addTask() {
-    const input = document.getElementById('taskInput');
-    const taskText = input.value.trim();
-
-    if (taskText === '') {
-      alert('Escreve alguma coisa!');
-      return;
-    }
-
-    const li = document.createElement('li');
-    li.textContent = taskText;
-    
-    li.onclick = function() {
-      li.style.textDecoration = 'line-through';
-    }
-
-    document.getElementById('taskList').appendChild(li);
-
-    input.value = '';
-  }
-</script>
-
-</body>
-</html>
