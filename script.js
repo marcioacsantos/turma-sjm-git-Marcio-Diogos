@@ -10,4 +10,5 @@ if (nome.value === "") {
 if (email.value === "") {
     alert("Preencha o email");
 }
+alert("Mensagem enviada com sucesso!");
 });
