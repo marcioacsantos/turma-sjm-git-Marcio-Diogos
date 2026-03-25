@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos — TETPSI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html" class="active">Projetos</a></li>
+        <li><a href="contatos.html">Contactos</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag">Trabalho real</span>
+      <h1>Projetos dos Alunos</h1>
+      <p>Exemplos do que os alunos do TETPSI constroem ao longo do curso — projetos reais, com tecnologias reais.</p>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <section class="section projetos-section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="dados">Bases de Dados</button>
+        <button class="filter-btn" data-filter="sistemas">Sistemas</button>
+      </div>
+
+      <div class="projetos-grid" id="projetosGrid">
+
+        <div class="projeto-card" data-category="web">
+          <div class="projeto-thumb projeto-thumb--blue">
+            <span class="projeto-emoji">🛒</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>Loja Online de Produtos Locais</h3>
+            <p>Plataforma de e-commerce para venda de produtos artesanais, com carrinho de compras, filtros e painel de administração.</p>
+            <div class="projeto-meta">
+              <span>👤 Ana Silva &amp; João Costa</span>
+              <span>📅 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="dados">
+          <div class="projeto-thumb projeto-thumb--green">
+            <span class="projeto-emoji">📊</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Java</span>
+              <span class="tag">Dados</span>
+            </div>
+            <h3>Sistema de Gestão de Biblioteca</h3>
+            <p>Aplicação desktop para gestão de empréstimos, devoluções e catálogo de livros, com base de dados relacional em MySQL.</p>
+            <div class="projeto-meta">
+              <span>👤 Miguel Ferreira</span>
+              <span>📅 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="web">
+          <div class="projeto-thumb projeto-thumb--orange">
+            <span class="projeto-emoji">🌐</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>Plataforma de Quiz Escolar</h3>
+            <p>Aplicação web para criação e realização de quizzes, com sistema de pontuações e rankings por turma.</p>
+            <div class="projeto-meta">
+              <span>👤 Sofia Rodrigues</span>
+              <span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="sistemas">
+          <div class="projeto-thumb projeto-thumb--purple">
+            <span class="projeto-emoji">🖧</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">Linux</span>
+              <span class="tag">Redes</span>
+              <span class="tag">Sistemas</span>
+            </div>
+            <h3>Infraestrutura de Rede Escolar</h3>
+            <p>Projeto de configuração de uma rede local segmentada com VLANs, servidor DHCP, DNS e firewall para ambiente escolar.</p>
+            <div class="projeto-meta">
+              <span>👤 Rui Mendes &amp; Catarina Lima</span>
+              <span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="dados">
+          <div class="projeto-thumb projeto-thumb--red">
+            <span class="projeto-emoji">🏥</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Java</span>
+              <span class="tag">Dados</span>
+            </div>
+            <h3>Sistema de Agendamento de Consultas</h3>
+            <p>Aplicação para clínica médica com gestão de pacientes, médicos, consultas e histórico clínico simplificado.</p>
+            <div class="projeto-meta">
+              <span>👤 Beatriz Nunes</span>
+              <span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="web">
+          <div class="projeto-thumb projeto-thumb--teal">
+            <span class="projeto-emoji">🎮</span>
+          </div>
+          <div class="projeto-body">
+            <div class="projeto-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Canvas</span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>Jogo 2D em JavaScript</h3>
+            <p>Jogo de plataformas desenvolvido com Canvas API, com níveis progressivos, sistema de vidas e leaderboard local.</p>
+            <div class="projeto-meta">
+              <span>👤 Tiago Alves</span>
+              <span>📅 2025</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-blob"></div>
+        <h2>Queres fazer parte disto?</h2>
+        <p>Entra no curso e começa a construir os teus próprios projetos.</p>
+        <div class="cta-actions">
+          <a href="contatos.html" class="btn btn-primary btn-lg">Inscreve-te já</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+        <p>Técnico Especialista em Tecnologias de Programação e Sistemas de Informação</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contatos.html">Contactos</a>
+      </div>
+      <div class="footer-contact">
+        <p>📧 info@teuprograma.pt</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Curso TETPSI — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

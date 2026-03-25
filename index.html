@@ -5,58 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso TETPSI</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Técnico Especialista em Tecnologias de Programação e Sistemas de Informação</h1>
-  <p>Constrói o teu futuro na área da tecnologia</p>
-  <a href="#contacto" class="btn">Inscreve-te já</a>
-</header>
-
-<section>
-  <h2>Sobre o Curso</h2>
-  <p>
-    Este curso prepara-te para uma carreira na área das tecnologias de informação,
-    com foco em programação, desenvolvimento de software e gestão de sistemas.
-  </p>
-</section>
-
-<section>
-  <h2>O que vais aprender</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>Programação</h3>
-      <p>Aprende linguagens como Java, Python e desenvolvimento web.</p>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contatos.html">Contactos</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="feature">
-      <h3>Bases de Dados</h3>
-      <p>Modelação, SQL e gestão de informação.</p>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
     </div>
-    <div class="feature">
-      <h3>Sistemas de Informação</h3>
-      <p>Arquitetura, redes e administração de sistemas.</p>
+    <div class="hero-content">
+      <span class="hero-tag">Curso Profissional</span>
+      <h1 class="hero-title">
+        Técnico Especialista em<br>
+        <em>Tecnologias de Programação</em><br>
+        e Sistemas de Informação
+      </h1>
+      <p class="hero-sub">Constrói o teu futuro na área da tecnologia com um curso preparado para o mercado real.</p>
+      <div class="hero-actions">
+        <a href="contatos.html" class="btn btn-primary">Inscreve-te já</a>
+        <a href="#sobre" class="btn btn-ghost">Saber mais ↓</a>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="hero-badge">
+      <svg viewBox="0 0 100 100" class="badge-ring"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 4"/></svg>
+      <span>2 anos · Nível 5 EQF</span>
+    </div>
+  </header>
 
-<section>
-  <h2>Saídas Profissionais</h2>
-  <p>
-    Poderás trabalhar como programador, técnico de IT, administrador de sistemas
-    ou continuar estudos na área das tecnologias.
-  </p>
-</section>
+  <!-- SOBRE -->
+  <section id="sobre" class="section sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <span class="section-tag">Sobre o Curso</span>
+          <h2>Preparados para o mercado que existe, <em>não para o do passado</em></h2>
+          <p>Este curso prepara-te para uma carreira sólida nas tecnologias de informação, com foco em programação, desenvolvimento de software e gestão de sistemas — competências que as empresas procuram hoje.</p>
+          <p>Com uma abordagem prática e orientada a projetos reais, sais com um portfólio e experiência que fazem a diferença.</p>
+        </div>
+        <div class="sobre-stats">
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Anos de formação</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">90%</span>
+            <span class="stat-label">Empregabilidade</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Módulos técnicos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">FCT</span>
+            <span class="stat-label">Estágio profissional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>Interessado? Entra em contacto connosco para mais informações.</p>
-  <p>Email: info@teuprograma.pt</p>
-</section>
+  <!-- O QUE APRENDES -->
+  <section class="section aprender">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Currículo</span>
+        <h2>O que vais aprender</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card card--accent">
+          <div class="card-icon">⌨️</div>
+          <h3>Programação</h3>
+          <p>Java, Python, HTML/CSS/JS e metodologias modernas de desenvolvimento de software.</p>
+          <ul class="card-list">
+            <li>Programação orientada a objetos</li>
+            <li>Desenvolvimento web full-stack</li>
+            <li>Algoritmos e estruturas de dados</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗄️</div>
+          <h3>Bases de Dados</h3>
+          <p>Modelação relacional, SQL avançado e introdução a bases de dados NoSQL.</p>
+          <ul class="card-list">
+            <li>Modelação entidade-relação</li>
+            <li>SQL e stored procedures</li>
+            <li>Administração de SGBD</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🖧</div>
+          <h3>Sistemas & Redes</h3>
+          <p>Arquitetura de sistemas, redes TCP/IP, administração Linux e Windows Server.</p>
+          <ul class="card-list">
+            <li>Configuração de redes</li>
+            <li>Segurança informática</li>
+            <li>Virtualização e cloud</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">📐</div>
+          <h3>Engenharia de Software</h3>
+          <p>Análise de requisitos, UML, padrões de design e gestão de projetos ágeis.</p>
+          <ul class="card-list">
+            <li>Scrum e metodologias ágeis</li>
+            <li>Modelação UML</li>
+            <li>Testes e qualidade de software</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2026 Curso TETPSI - Todos os direitos reservados</p>
-</footer>
+  <!-- SAIDAS -->
+  <section class="section saidas">
+    <div class="container">
+      <div class="saidas-inner">
+        <div class="section-header">
+          <span class="section-tag">Saídas Profissionais</span>
+          <h2>O teu próximo passo começa aqui</h2>
+          <p>Com este curso podes entrar diretamente no mercado de trabalho ou prosseguir estudos no ensino superior.</p>
+        </div>
+        <div class="saidas-list">
+          <div class="saida-item"><span class="saida-dot"></span>Programador / Desenvolvedor Web</div>
+          <div class="saida-item"><span class="saida-dot"></span>Técnico de Sistemas e Redes</div>
+          <div class="saida-item"><span class="saida-dot"></span>Administrador de Bases de Dados</div>
+          <div class="saida-item"><span class="saida-dot"></span>Analista de Sistemas</div>
+          <div class="saida-item"><span class="saida-dot"></span>Técnico de Suporte IT</div>
+          <div class="saida-item"><span class="saida-dot"></span>Continuação no Ensino Superior</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-blob"></div>
+        <h2>Pronto para começar?</h2>
+        <p>Entra em contacto connosco e fica a saber tudo sobre as inscrições, horários e condições de acesso.</p>
+        <div class="cta-actions">
+          <a href="contatos.html" class="btn btn-primary btn-lg">Fala connosco</a>
+          <a href="projetos.html" class="btn btn-ghost-dark">Ver projetos dos alunos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+        <p>Técnico Especialista em Tecnologias de Programação e Sistemas de Informação</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contatos.html">Contactos</a>
+      </div>
+      <div class="footer-contact">
+        <p>📧 info@teuprograma.pt</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Curso TETPSI — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,18 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos — TETPSI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Contactos</h1>
-    <form>
-        <input type="text" id="nome" placeholder="Nome">
-        <input type="email" id="email" placeholder="Email">
-        <textarea id="mensagem" placeholder="Mensagem"></textarea>
-        <button type="submit">Enviar</button>
-</form>
-<script src="script.js"></script>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contatos.html" class="active">Contactos</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag">Fala connosco</span>
+      <h1>Contactos</h1>
+      <p>Tens dúvidas sobre o curso? Entra em contacto — respondemos rapidamente.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div class="contact-info">
+          <h2>Informações de Contacto</h2>
+          <p>Podes chegar até nós por email, telefone ou preenchendo o formulário ao lado. Estamos disponíveis de segunda a sexta.</p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <span>info@teuprograma.pt</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div>
+                <strong>Telefone</strong>
+                <span>+351 200 000 000</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🕐</div>
+              <div>
+                <strong>Horário de atendimento</strong>
+                <span>Seg – Sex, 09:00 – 17:00</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <strong>Localização</strong>
+                <span>Portugal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" placeholder="O teu nome" autocomplete="name">
+              <span class="field-error" id="erroNome">Por favor preenche o teu nome.</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="email@exemplo.com" autocomplete="email">
+              <span class="field-error" id="erroEmail">Por favor indica um email válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto">
+                <option value="">Seleciona um assunto</option>
+                <option value="inscricao">Inscrição no curso</option>
+                <option value="info">Informações gerais</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="5" placeholder="Escreve a tua mensagem aqui..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar mensagem</button>
+            <div class="form-success" id="formSuccess">
+              ✅ Mensagem enviada com sucesso! Entraremos em contacto brevemente.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">TET<span>PSI</span></a>
+        <p>Técnico Especialista em Tecnologias de Programação e Sistemas de Informação</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contatos.html">Contactos</a>
+      </div>
+      <div class="footer-contact">
+        <p>📧 info@teuprograma.pt</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Curso TETPSI — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
