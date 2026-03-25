@@ -11,4 +11,5 @@ if (email.value === "") {
     alert("Preencha o email");
 }
 alert("Mensagem enviada com sucesso!");
+form.reset();
 });
