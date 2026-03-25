@@ -26,6 +26,11 @@
   function addTask() {
     const input = document.getElementById('taskInput');
     const taskText = input.value.trim();
+
+    if (taskText === '') {
+      alert('Escreve alguma coisa!');
+      return;
+    }
     
 </body>
 </html>
