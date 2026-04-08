@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipa — TETPSI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    /* ── EQUIPA PAGE STYLES ── */
+
+    .equipa-section { background: var(--white); }
+
+    .equipa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 8px;
+    }
+
+    .membro-card {
+      background: var(--white);
+      border: 1px solid #e8ecf1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+      animation: fadeUp .6s ease both;
+    }
+    .membro-card:nth-child(2) { animation-delay: .1s; }
+    .membro-card:nth-child(3) { animation-delay: .2s; }
+
+    .membro-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .membro-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .membro-thumb--blue   { background: linear-gradient(135deg, #1a56e8, #4f7eff); }
+    .membro-thumb--green  { background: linear-gradient(135deg, #059669, #10b981); }
+    .membro-thumb--purple { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+
+    .membro-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      border: 3px solid rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+
+    .membro-body {
+      padding: 28px 24px;
+    }
+
+    .membro-role {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-light);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+
+    .membro-body h3 {
+      font-size: 1.2rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .membro-body p {
+      font-size: .9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .membro-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .skill-tag {
+      font-size: .72rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: .04em;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--gray-light);
+      color: var(--gray);
+    }
+
+    .membro-footer {
+      display: flex;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid #f0f2f5;
+    }
+
+    .membro-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--gray);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1.5px solid #e0e4ea;
+      transition: all .18s;
+    }
+    .membro-link:hover {
+      color: var(--blue);
+      border-color: var(--blue);
+      background: var(--blue-light);
+    }
+
+    /* ── SOBRE A EQUIPA ── */
+    .sobre-equipa {
+      background: var(--gray-light);
+    }
+
+    .sobre-equipa-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .sobre-equipa-text .section-tag { display: block; }
+    .sobre-equipa-text h2 { margin: 12px 0 20px; }
+    .sobre-equipa-text p + p { margin-top: 12px; }
+
+    .equipa-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .sobre-equipa-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 600px) {
+      .equipa-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">TET<span>PSI</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="equipa.html" class="active">Equipa</a></li>
+        <li><a href="contatos.html">Contactos</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag">Quem somos</span>
+      <h1>A Nossa <em>Equipa</em></h1>
+      <p>Conhece as pessoas por trás do projeto — três elementos com competências complementares, unidos por uma paixão comum pela tecnologia.</p>
+    </div>
+  </div>
+
+  <!-- MEMBROS DA EQUIPA -->
+  <section class="section equipa-section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Os membros</span>
+        <h2>Três pessoas, <em>um objetivo</em></h2>
+        <p>Cada elemento traz uma perspetiva única que enriquece o trabalho coletivo.</p>
+      </div>
+
+      <div class="equipa-grid">
+
+        <!-- MEMBRO 1 -->
+        <div class="membro-card">
+          <div class="membro-thumb membro-thumb--blue">
+            <div class="membro-avatar">👤</div>
+          </div>
+          <div class="membro-body">
+            <span class="membro-role">Função / Cargo</span>
+            <h3>Nome do Elemento 1</h3>
+            <p>Breve descrição sobre este membro — o que faz, o que gosta, ou o que traz para a equipa. Podes personalizar este texto livremente.</p>
+            <div class="membro-skills">
+              <span class="skill-tag">Competência A</span>
+              <span class="skill-tag">Competência B</span>
+              <span class="skill-tag">Competência C</span>
+            </div>
+            <div class="membro-footer">
+              <a href="#" class="membro-link">📧 Email</a>
+              <a href="#" class="membro-link">💼 LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEMBRO 2 -->
+        <div class="membro-card">
+          <div class="membro-thumb membro-thumb--green">
+            <div class="membro-avatar">👤</div>
+          </div>
+          <div class="membro-body">
+            <span class="membro-role">Função / Cargo</span>
+            <h3>Nome do Elemento 2</h3>
+            <p>Breve descrição sobre este membro — o que faz, o que gosta, ou o que traz para a equipa. Podes personalizar este texto livremente.</p>
+            <div class="membro-skills">
+              <span class="skill-tag">Competência A</span>
+              <span class="skill-tag">Competência B</span>
+              <span class="skill-tag">Competência C</span>
+            </div>
+            <div class="membro-footer">
+              <a href="#" class="membro-link">📧 Email</a>
+              <a href="#" class="membro-link">💼 LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEMBRO 3 -->
+        <div class="membro-card">
+          <div class="membro-thumb membro-thumb--purple">
+            <div class="membro-avatar">👤</div>
+          </div>
+          <div class="membro-body">
+            <span class="membro-role">Função / Cargo</span>
+            <h3>Nome do Elemento 3</h3>
+            <p>Breve descrição sobre este membro — o que faz, o que gosta, ou o que traz para a equipa. Podes personalizar este texto livremente.</p>
+            <div class="membro-skills">
+              <span class="skill-tag">Competência A</span>
+              <span class="skill-tag">Competência B</span>
+              <span class="skill-tag">Competência C</span>
+            </div>
+            <div class="membro-footer">
+              <a href="#" class="membro-link">📧 Email</a>
+              <a href="#" class="membro-link">💼 LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A EQUIPA -->
+  <section class="section sobre-equipa">
+    <div class="container">
+      <div class="sobre-equipa-inner">
+        <div class="sobre-equipa-text">
+          <span class="section-tag">A nossa história</span>
+          <h2>Unidos pela tecnologia, <em>movidos pela aprendizagem</em></h2>
+          <p>Somos uma equipa formada no contexto do curso TETPSI com o objetivo de desenvolver soluções criativas e funcionais.</p>
+          <p>Cada um de nós contribui com a sua área de especialização para construir projetos sólidos e bem executados.</p>
+        </div>
+        <div class="equipa-stats">
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Elementos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Projetos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Tecnologias</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2026</span>
+            <span class="stat-label">Ano letivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-blob"></div>
+        <h2>Queres trabalhar connosco?</h2>
+        <p>Entra em contacto e fala diretamente com a nossa equipa.</p>
+        <div class="cta-actions">
+          <a href="contatos.html" class="btn btn-primary btn-lg">Fala connosco</a>
+          <a href="projetos.html" class="btn btn-ghost-dark">Ver os nossos projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">TET<span>PSI</span></a>
+        <p>Técnico Especialista em Tecnologias de Programação e Sistemas de Informação</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="equipa.html">Equipa</a>
+        <a href="contatos.html">Contactos</a>
+      </div>
+      <div class="footer-contact">
+        <p>📧 info@teuprograma.pt</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Curso TETPSI — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
